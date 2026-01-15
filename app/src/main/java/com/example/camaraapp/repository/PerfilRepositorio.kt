@@ -1,7 +1,7 @@
-package com.example.cameraapp.repository
+package com.example.camaraapp.repository
 
 import android.net.Uri
-import com.example.cameraapp.model.PerfilDeUsuario
+import com.example.camaraapp.model.PerfilDeUsuario
 
 
 class PerfilRepositorio {

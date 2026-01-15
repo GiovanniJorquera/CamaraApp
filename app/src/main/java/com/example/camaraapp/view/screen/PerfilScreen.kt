@@ -1,4 +1,4 @@
-package com.example.cameraapp.view.screen
+package com.example.camaraapp.view.screen
 
 import android.Manifest
 import android.content.Context
@@ -27,8 +27,8 @@ import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.unit.dp
 import androidx.core.content.ContextCompat
 import androidx.core.content.FileProvider
-import com.example.cameraapp.view.components.ImagenInteligente
-import com.example.cameraapp.viewmodel.PerfilViewModel
+import com.example.camaraapp.view.components.ImagenInteligente
+import com.example.camaraapp.viewmodel.PerfilViewModel
 import java.io.File
 import java.text.SimpleDateFormat
 import java.util.Date
@@ -63,6 +63,16 @@ fun PerfilScreen(viewModel: PerfilViewModel) {
         )
     }
 
+    val requestCameraPermission = rememberLauncherForActivityResult(
+        ActivityResultContracts.RequestPermission()
+    ) { isGranted ->
+        if (isGranted) {
+            val uri = createImageUri(context)
+            cameraUri = uri
+            takePictureLauncher.launch(uri)
+        }
+    }
+
     Box(
         modifier = Modifier
             .fillMaxSize()
@@ -89,7 +99,7 @@ fun PerfilScreen(viewModel: PerfilViewModel) {
                         takePictureLauncher.launch(uri)
                     }
                     else -> {
-
+                        requestCameraPermission.launch(Manifest.permission.CAMERA)
                     }
                 }
             }) {

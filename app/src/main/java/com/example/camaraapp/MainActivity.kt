@@ -6,8 +6,8 @@ import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
 import androidx.lifecycle.viewmodel.compose.viewModel
 import com.example.camaraapp.ui.theme.CamaraAppTheme
-import com.example.cameraapp.view.screen.PerfilScreen
-import com.example.cameraapp.viewmodel.PerfilViewModel
+import com.example.camaraapp.view.screen.PerfilScreen
+import com.example.camaraapp.viewmodel.PerfilViewModel
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {

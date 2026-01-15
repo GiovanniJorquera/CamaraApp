@@ -1,4 +1,4 @@
-package com.example.cameraapp.model
+package com.example.camaraapp.model
 
 import android.net.Uri
 

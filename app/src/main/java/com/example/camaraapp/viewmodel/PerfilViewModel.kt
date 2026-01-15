@@ -1,9 +1,9 @@
-package com.example.cameraapp.viewmodel
+package com.example.camaraapp.viewmodel
 
 import android.net.Uri
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.example.cameraapp.repository.PerfilRepositorio
+import com.example.camaraapp.repository.PerfilRepositorio
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.launch

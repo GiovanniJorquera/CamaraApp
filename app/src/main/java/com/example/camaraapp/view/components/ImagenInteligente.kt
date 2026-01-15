@@ -1,4 +1,4 @@
-package com.example.cameraapp.view.components
+package com.example.camaraapp.view.components
 
 import android.net.Uri
 import androidx.compose.foundation.Image
